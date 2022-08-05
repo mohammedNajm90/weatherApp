@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_app">
+    <ImageView
+        android:id="@+id/nextIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_next_icon"/>
+    <ImageView
+        android:id="@+id/previousIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_previous_icon"/>
+
+    <TextView
+        android:id="@+id/nowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintTop_toBottomOf="@id/nextIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baghdad"
+        android:layout_margin="8dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/nowDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iraq"
+        android:layout_margin="8dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/cityName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:layout_marginBottom="24dp"
+        />
+    <ImageView
+        android:id="@+id/circleView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/countryName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/circle_bg"
+        android:outlineSpotShadowColor="@color/black"
+        android:elevation="2dp"
+        />
+    <ImageView
+        android:id="@+id/statusImg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@id/circleView"
+        app:layout_constraintEnd_toEndOf="@id/circleView"
+        app:layout_constraintTop_toTopOf="@id/circleView"
+        android:src="@drawable/ic_launcher_background"/>
+    <TextView
+        android:id="@+id/temprt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="52"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@id/circleView"
+        app:layout_constraintTop_toBottomOf="@id/statusImg"
+        app:layout_constraintBottom_toBottomOf="@id/circleView"
+        app:layout_constraintEnd_toEndOf="@id/circleView"/>
+
+
+
+    <TextView
+        android:id="@+id/WindStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wind status"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/circleView"
+        app:layout_constraintEnd_toEndOf="@id/circleView"
+        app:layout_constraintTop_toBottomOf="@id/circleView"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
+        android:id="@+id/WindStatusValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7 mph"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/WindStatusLabel"
+        app:layout_constraintStart_toStartOf="@id/WindStatusLabel"
+        app:layout_constraintTop_toBottomOf="@id/WindStatusLabel"
+        android:layout_marginTop="8dp"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/labelDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Next 3 days"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/firstDayCard"
+            android:layout_width="112dp"
+            android:layout_height="128dp"
+            android:backgroundTint="#f1f1f1"
+            app:layout_constraintTop_toBottomOf="@id/labelDec"
+            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp"
+            android:foregroundGravity="center"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+
+            >
+            <TextView
+                android:id="@+id/firstDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Day"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/firstDayImg"
+                android:layout_width="32dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:src="@color/black"
+                />
+            <TextView
+                android:id="@+id/firstDayValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44* c"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="88dp"
+                android:layout_marginStart="32dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/secondDayCard"
+            android:layout_width="112dp"
+            android:layout_height="128dp"
+            android:backgroundTint="#f1f1f1"
+            app:layout_constraintTop_toBottomOf="@id/labelDec"
+            app:layout_constraintStart_toEndOf="@id/firstDayCard"
+            android:elevation="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp"
+            android:foregroundGravity="center"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            >
+            <TextView
+                android:id="@+id/secondDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Second Day"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/secondDayImg"
+                android:layout_width="32dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:src="@color/black"/>
+            <TextView
+                android:id="@+id/secondDayValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44* c"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="88dp"
+                android:layout_marginStart="32dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thirdDayCard"
+            android:layout_width="112dp"
+            android:layout_height="128dp"
+            android:backgroundTint="#f1f1f1"
+            app:layout_constraintTop_toBottomOf="@id/labelDec"
+            app:layout_constraintStart_toEndOf="@id/secondDayCard"
+            android:elevation="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="20dp"
+            android:foregroundGravity="center"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            >
+            <TextView
+                android:id="@+id/thirdDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Third Day"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/thirdDayImg"
+                android:layout_width="32dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:src="@drawable/coldy"/>
+            <TextView
+                android:id="@+id/thirdDayValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44* c"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="88dp"
+                android:layout_marginStart="32dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
