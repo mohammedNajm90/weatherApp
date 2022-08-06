@@ -8,19 +8,19 @@
     android:background="@drawable/bg_app">
     <ImageView
         android:id="@+id/nextIcon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/sizeImage"
+        android:layout_height="@dimen/sizeImage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/small_margin"
         android:src="@drawable/ic_next_icon"/>
     <ImageView
         android:id="@+id/previousIcon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/sizeImage"
+        android:layout_height="@dimen/sizeImage"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/small_margin"
         android:src="@drawable/ic_previous_icon"/>
 
     <TextView
@@ -38,8 +38,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Baghdad"
-        android:layout_margin="8dp"
-        android:textSize="32sp"
+        android:layout_margin="@dimen/small_margin"
+        android:textSize="@dimen/textSizeNameGovernorates"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/nowDate"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,32 +51,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Iraq"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
+        android:layout_margin="@dimen/small_margin"
+        android:textSize="@dimen/textSizeCountryName"
         app:layout_constraintTop_toBottomOf="@id/cityName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/white"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/largeMargin"
         />
     <ImageView
         android:id="@+id/circleView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="@dimen/circleSize"
+        android:layout_height="@dimen/circleSize"
+        android:layout_marginTop="@dimen/xLrgeMargin"
         app:layout_constraintTop_toBottomOf="@id/countryName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/circle_bg"
         android:outlineSpotShadowColor="@color/black"
-        android:elevation="2dp"
+        android:elevation="@dimen/tinySize"
         />
     <ImageView
         android:id="@+id/statusImg"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="24dp"
-        android:elevation="2dp"
+        android:layout_width="@dimen/statusImgSize"
+        android:layout_height="@dimen/statusImgSize"
+        android:layout_marginTop="@dimen/largeMargin"
+        android:elevation="@dimen/tinySize"
         app:layout_constraintStart_toStartOf="@id/circleView"
         app:layout_constraintEnd_toEndOf="@id/circleView"
         app:layout_constraintTop_toTopOf="@id/circleView"
@@ -87,23 +87,20 @@
         android:layout_height="wrap_content"
         android:text="52"
         android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="@dimen/temprtureFontSize"
         android:textStyle="bold"
-        android:elevation="2dp"
+        android:elevation="@dimen/tinySize"
         app:layout_constraintStart_toStartOf="@id/circleView"
         app:layout_constraintTop_toBottomOf="@id/statusImg"
         app:layout_constraintBottom_toBottomOf="@id/circleView"
         app:layout_constraintEnd_toEndOf="@id/circleView"/>
-
-
-
     <TextView
         android:id="@+id/WindStatusLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wind status"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="@dimen/largeFontSize"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/circleView"
         app:layout_constraintEnd_toEndOf="@id/circleView"
@@ -121,11 +118,11 @@
         app:layout_constraintEnd_toEndOf="@id/WindStatusLabel"
         app:layout_constraintStart_toStartOf="@id/WindStatusLabel"
         app:layout_constraintTop_toBottomOf="@id/WindStatusLabel"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/small_margin"
         />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/circleSize"
         android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,10 +132,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="The Next 3 days"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/largeMargin"
+            android:layout_marginStart="@dimen/largeMargin"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/largeFontSize"
             android:textStyle="bold"
             android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"
@@ -146,18 +143,18 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/firstDayCard"
-            android:layout_width="112dp"
-            android:layout_height="128dp"
-            android:backgroundTint="#f1f1f1"
+            android:layout_width="@dimen/widthSizeImg"
+            android:layout_height="@dimen/heightSizeImg"
+            android:backgroundTint="@color/card_bg"
             app:layout_constraintTop_toBottomOf="@id/labelDec"
             app:layout_constraintStart_toStartOf="parent"
-            android:elevation="16dp"
-            android:layout_marginTop="16dp"
+            android:elevation="@dimen/mediumSize"
+            android:layout_marginTop="@dimen/mediumSize"
             android:layout_marginStart="25dp"
             app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/margin20"
             android:foregroundGravity="center"
-            app:strokeWidth="2dp"
+            app:strokeWidth="@dimen/tinySize"
             app:strokeColor="@color/black"
 
             >
@@ -168,12 +165,12 @@
                 android:text="First Day"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="@dimen/largeFontSize"/>
 
             <ImageView
                 android:id="@+id/firstDayImg"
-                android:layout_width="32dp"
-                android:layout_height="33dp"
+                android:layout_width="@dimen/xLrgeMargin"
+                android:layout_height="@dimen/xLrgeMargin"
                 android:layout_gravity="center"
                 android:src="@color/black"
                 />
@@ -182,27 +179,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="44* c"
-                android:textSize="24sp"
+                android:textSize="@dimen/fontNextDays"
                 android:textColor="@color/black"
-                android:layout_marginTop="88dp"
-                android:layout_marginStart="32dp"/>
+                android:layout_marginTop="@dimen/margin88"
+                android:layout_marginStart="@dimen/xLrgeMargin"/>
 
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/secondDayCard"
-            android:layout_width="112dp"
-            android:layout_height="128dp"
-            android:backgroundTint="#f1f1f1"
+            android:layout_width="@dimen/widthSizeImg"
+            android:layout_height="@dimen/heightSizeImg"
+            android:backgroundTint="@color/card_bg"
             app:layout_constraintTop_toBottomOf="@id/labelDec"
             app:layout_constraintStart_toEndOf="@id/firstDayCard"
-            android:elevation="16dp"
-            android:layout_marginTop="16dp"
+            android:elevation="@dimen/mediumSize"
+            android:layout_marginTop="@dimen/mediumSize"
             android:layout_marginStart="10dp"
             app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/margin20"
             android:foregroundGravity="center"
-            app:strokeWidth="2dp"
+            app:strokeWidth="@dimen/tinySize"
             app:strokeColor="@color/black"
             >
             <TextView
@@ -212,12 +209,12 @@
                 android:text="Second Day"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="@dimen/largeFontSize"/>
 
             <ImageView
                 android:id="@+id/secondDayImg"
-                android:layout_width="32dp"
-                android:layout_height="33dp"
+                android:layout_width="@dimen/xLrgeMargin"
+                android:layout_height="@dimen/xLrgeMargin"
                 android:layout_gravity="center"
                 android:src="@color/black"/>
             <TextView
@@ -225,27 +222,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="44* c"
-                android:textSize="24sp"
+                android:textSize="@dimen/fontNextDays"
                 android:textColor="@color/black"
-                android:layout_marginTop="88dp"
-                android:layout_marginStart="32dp"/>
+                android:layout_marginTop="@dimen/margin88"
+                android:layout_marginStart="@dimen/xLrgeMargin"/>
 
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/thirdDayCard"
-            android:layout_width="112dp"
-            android:layout_height="128dp"
-            android:backgroundTint="#f1f1f1"
+            android:layout_width="@dimen/widthSizeImg"
+            android:layout_height="@dimen/heightSizeImg"
+            android:backgroundTint="@color/card_bg"
             app:layout_constraintTop_toBottomOf="@id/labelDec"
             app:layout_constraintStart_toEndOf="@id/secondDayCard"
-            android:elevation="16dp"
-            android:layout_marginTop="16dp"
+            android:elevation="@dimen/mediumSize"
+            android:layout_marginTop="@dimen/mediumSize"
             android:layout_marginStart="10dp"
             app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="@dimen/margin20"
             android:foregroundGravity="center"
-            app:strokeWidth="2dp"
+            app:strokeWidth="@dimen/tinySize"
             app:strokeColor="@color/black"
             >
             <TextView
@@ -255,14 +252,14 @@
                 android:text="Third Day"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="@dimen/largeFontSize"/>
 
             <ImageView
                 android:id="@+id/thirdDayImg"
-                android:layout_width="32dp"
-                android:layout_height="33dp"
+                android:layout_width="@dimen/xLrgeMargin"
+                android:layout_height="@dimen/xLrgeMargin"
                 android:layout_gravity="center"
-                android:src="@drawable/coldy"/>
+                android:src="@drawable/notfound"/>
             <TextView
                 android:id="@+id/thirdDayValue"
                 android:layout_width="wrap_content"
@@ -270,8 +267,8 @@
                 android:text="44* c"
                 android:textSize="24sp"
                 android:textColor="@color/black"
-                android:layout_marginTop="88dp"
-                android:layout_marginStart="32dp"/>
+                android:layout_marginTop="@dimen/margin88"
+                android:layout_marginStart="@dimen/xLrgeMargin"/>
 
 
         </androidx.cardview.widget.CardView>

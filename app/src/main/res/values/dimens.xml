@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sizeImage">48dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="textSizeNameGovernorates">32sp</dimen>
+    <dimen name="textSizeCountryName">16sp</dimen>
+    <dimen name="largeMargin">24dp</dimen>
+    <dimen name="circleSize">200dp</dimen>
+    <dimen name="xLrgeMargin">32dp</dimen>
+    <dimen name="statusImgSize">64dp</dimen>
+    <dimen name="largeFontSize">16sp</dimen>
+    <dimen name="temprtureFontSize">40sp</dimen>
+    <dimen name="margin88">88dp</dimen>
+    <dimen name="fontNextDays">20sp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="mediumSize">16dp</dimen>
+    <dimen name="tinySize">2dp</dimen>
+    <dimen name="widthSizeImg">112dp</dimen>
+    <dimen name="heightSizeImg">128dp</dimen>
+</resources>

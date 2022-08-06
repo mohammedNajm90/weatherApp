@@ -1,7 +1,7 @@
 package com.example.weatherapp.data
 
 object GovernoratesOfIraq {
-    val governoratesList = mutableListOf<String>("Babylon","Baghdad" , "Basra", "Diyala", "Diyala", "Karbala", "Najaf");
+    val governoratesList = mutableListOf<String>("Babylon","Kirkuk",  "Mosul", "Maysan", "Basra", "Diyala", "Erbil", "Diyala", "Duhok", "Karbala", "Najaf", "Nineveh", "Sulaymaniyah", "Halabja", "Wasit", "Anbar");
 
     private var governorateIndex =0
 

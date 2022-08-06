@@ -37,13 +37,27 @@ class MainActivity : AppCompatActivity() {
     }
     fun changeImage(temperature:String, imgBox:ImageView){
         val _temperature = temperature.substring(0, 2).toInt()
-        if( _temperature >= 40)
+        if(_temperature >= 50)
+            imgBox.setImageResource(R.drawable.veryhot)
+        else if((_temperature >= 40)&&( _temperature <= 49))
             imgBox.setImageResource(R.drawable.sunny)
         else if (( _temperature >= 30)&&( _temperature >= 39))
             imgBox.setImageResource(R.drawable.warm)
         else if( _temperature < 30)
-            imgBox.setImageResource(R.drawable.coldy)
+            imgBox.setImageResource(R.drawable.notfound)
 
+    }
+    fun deletePlu(temperature: String):String
+    {
+        var temperaturee = temperature
+        if(temperaturee[0] == '+')
+        {
+            Log.i(TAG , "temperaturee")
+            return temperaturee.substring(1, temperaturee.length)
+            Log.i(TAG , temperaturee)
+        }
+        Log.i(TAG , temperaturee)
+        return temperaturee
     }
     private fun makeRequestUsingOKHTTP(city:String) {
 
@@ -61,14 +75,14 @@ class MainActivity : AppCompatActivity() {
                     runOnUiThread{
                         binding.apply {
                             cityName.text = GovernoratesOfIraq.getCurrentGovernorate()
-                            temprt.text = result.temperature.toString()
+                            temprt.text = deletePlu(result.temperature.toString())
                             changeImage(temprt.text.toString(), statusImg)
                             WindStatusValue.text = result.wind.toString()
-                            firstDayValue.text = result.forecast[0].temperature
+                            firstDayValue.text = deletePlu(result.forecast[0].temperature)
                             changeImage(firstDayValue.text.toString(), firstDayImg)
-                            secondDayValue.text = result.forecast[1].temperature
+                            secondDayValue.text = deletePlu(result.forecast[1].temperature)
                             changeImage(secondDayValue.text.toString(), secondDayImg)
-                            thirdDayValue.text = result.forecast[2].temperature
+                            thirdDayValue.text = deletePlu(result.forecast[2].temperature)
 
                         }
                     }
